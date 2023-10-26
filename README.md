@@ -4,9 +4,10 @@ Ratio-spoof is a cross-platform, free and open source tool to spoof the download
 ![](./assets/demo.gif)
 
 ## Motivation
-Here in brazil, not everybody has a great upload speed, and most of the private trackers requires a ratio to be greater than or equal to 1 (e.g. if you downloaded 1gb you must upload 1gb as well) in order to survive. Plus, i have always been fascinated by the bittorrent protocol, [i even made a bittorrent webclient to learn a bit about it ](https://github.com/ap-pauloafonso/rwTorrent) so with the current global covid-19 lockdown i got some free time and decided to code my own simple cli tool to spoof bittorrent trackers.
+Here in Brazil, not everybody has a great upload speed, and most private trackers require a ratio greater than or equal to 1. For example, if you downloaded 1GB, you must also upload 1GB in order to survive. Additionally, I have always been fascinated by the BitTorrent protocol. In fact, [I even made a BitTorrent web client to learn more about it](https://github.com/ap-pauloafonso/rwTorrent). So, if you have a bad internet connection, feel free to use this tool. Otherwise, please consider seeding the files with a real torrent client.
 
-## How does it works?
+## How does it work?
+![Diagram](./assets/how-it-works.png)
 Bittorrent protocol works in such a way that there is no way that a tracker knows how much certain peer have downloaded or uploaded, so the tracker depends on the peer itself telling the amounts.
 
 Ratio-spoof acts like a normal bittorrent client but without downloading or uploading anything, in fact it just tricks the tracker pretending that.
@@ -45,8 +46,8 @@ required arguments:
 * Will start "downloading" with the initial value of 2gb downloaded  if possible at 500kbps speed until it reaches 100% mark.
 * Will start "uploading" with the initial value of 1gb uplodead at 1024kbps (aka 1mb/s) indefinitely.
 
-## Will i get caught using it ?
-Depends wether you use it carefuly, Its a hard task to catch cheaters, but if you start uploading crazy amounts out of nowhere or seeding something with no active leecher on the swarm you may be in risk.
+## Will I get caught using it ?
+Depends on whether you use it carefully, It's a hard task to catch cheaters, but if you start uploading crazy amounts out of nowhere or seeding something with no active leecher on the swarm you may be in risk.
 
 ## Bittorrent client supported 
 The default client emulation is qbittorrent v4.0.3, however you can change it by using the -c argument
@@ -54,5 +55,5 @@ The default client emulation is qbittorrent v4.0.3, however you can change it by
 ## Resources
 http://www.bittorrent.org/beps/bep_0003.html
 
-https://wiki.theory.org/index.php/BitTorrentSpecification
+https://wiki.theory.org/BitTorrentSpecification
 
